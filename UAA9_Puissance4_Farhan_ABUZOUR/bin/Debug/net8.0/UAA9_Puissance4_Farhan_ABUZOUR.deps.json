@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "UAA9_Puissance4_Farhan_ABUZOUR/1.0.0": {
+        "runtime": {
+          "UAA9_Puissance4_Farhan_ABUZOUR.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UAA9_Puissance4_Farhan_ABUZOUR/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
