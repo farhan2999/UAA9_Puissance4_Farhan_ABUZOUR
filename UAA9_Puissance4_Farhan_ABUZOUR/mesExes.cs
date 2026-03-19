@@ -14,21 +14,38 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
         /// <param name="grille"></param> 
         public static void AfficherGrille(int[,] grille)
         {
-            Console.Clear(); // Optionnel : nettoie l'écran à chaque tour pour faire plus propre
+            Console.Clear();
             for (int iLigne = 0; iLigne < grille.GetLength(0); iLigne++)
             {
                 Console.Write("|");
 
                 for (int iColonne = 0; iColonne < grille.GetLength(1); iColonne++)
                 {
-                   // Remplacer les chiffres par des symboles visuels
                     string symbole = " ";
-                    if (grille[iLigne, iColonne] == 1) symbole = "X"; // Jeton Joueur 1
-                    if (grille[iLigne, iColonne] == 2) symbole = "O"; // Jeton Joueur 2
-                    Console.Write(" " + symbole + " |");
+                    int valeurCase = grille[iLigne, iColonne]; // On regarde ce qu'il y a dans la case
 
+                    // 1. Les jetons normaux
+                    if (valeurCase == 1) symbole = "X";
+                    if (valeurCase == 2) symbole = "O";
+
+                    // 2. Les jetons GAGNANTS (11 ou 12)
+                    if (valeurCase == 11 || valeurCase == 12)
+                    {
+                        if (valeurCase == 11) symbole = "X";
+                        if (valeurCase == 12) symbole = "O";
+
+                        // On active la couleur verte pour les gagnants !
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+
+                    // On écrit le symbole (en couleur ou non)
+                    Console.Write(" " + symbole + " ");
+
+                    // On remet la couleur normale (gris/blanc) pour la barre de séparation "|"
+                    Console.ResetColor();
+                    Console.Write("|");
                 }
-                Console.WriteLine(); 
+                Console.WriteLine();
             }
             Console.WriteLine("-----------------------------");
             Console.WriteLine("| 0   1   2   3   4   5   6 |");
@@ -89,6 +106,58 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
                 }
             }
         }
+        /// <summary>
+        /// Cette méthode vérifie s'il y a une victoire horizontale pour le joueur donné, en parcourant le plateau et en cherchant 4 jetons consécutifs du même joueur
+        /// </summary>
+        /// <param name="tab">Le plateau de jeu</param>
+        /// <param name="joueur">Le numéro du joueur (1 ou 2) pour lequel on veut vérifier la victoire</param>  
+        /// <param name="booléen"></param>
+        /// <returns></returns>
+        public static bool VictoireHorizontale(int[,] tab, int joueur)
+        {
+            for (int iLigne = 0; iLigne <= 5; iLigne++)
+            {
+                for (int iColonne = 0; iColonne <= 3; iColonne++)
+                {
+                    if (tab[iLigne, iColonne] == joueur &&
+                        tab[iLigne, iColonne + 1] == joueur &&
+                        tab[iLigne, iColonne + 2] == joueur &&
+                        tab[iLigne, iColonne + 3] == joueur)
+                    {
+                        
+                        tab[iLigne, iColonne] = joueur + 10;
+                        tab[iLigne, iColonne + 1] = joueur + 10;
+                        tab[iLigne, iColonne + 2] = joueur + 10;
+                        tab[iLigne, iColonne + 3] = joueur + 10;
+
+                        return true; 
+                    }
+                }
+            }
+            return false;
+        }
+       /* public static bool VictoireVerticalement(int[,] tab, int joueur)
+        {
+            for (int iColonne = 0; iColonne <= 6; iColonne++)
+            {
+                for (int iLigne = 3; iLigne >= 0; iLigne++)
+                {
+                    if (tab[iLigne, iColonne] == joueur &&
+                        tab[iLigne + 1, iColonne] == joueur &&
+                        tab[iLigne + 2, iColonne] == joueur &&
+                        tab[iLigne + 3, iColonne] == joueur)
+                    {
+                        tab[iLigne, iColonne] = joueur + 10;
+                        tab[iLigne +1, iColonne] = joueur + 10;
+                        tab[iLigne + 2, iColonne] = joueur + 10;
+                        tab[iLigne + 3, iColonne] = joueur + 10;
+
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }*/
         /// <summary>
         /// Cette méthode demande à l'utilisateur de saisir un entier, et vérifie que la saisie est bien un entier avant de le retourner
         /// </summary>

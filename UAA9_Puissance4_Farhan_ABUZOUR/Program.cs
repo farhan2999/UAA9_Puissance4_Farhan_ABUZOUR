@@ -18,26 +18,35 @@
                 // On annonce à qui c'est le tour
                 Console.WriteLine("\nC'est au tour du Joueur " + joueurActuel + " !");
 
-                // Le joueur choisit sa colonne (La méthode s'occupe de demander et vérifier avec LireEntier)
+                // Le joueur choisit sa colonne
                 int colonneChoisie = mesExes.ChoisirColonne(grille);
 
                 // On fait tomber le jeton
                 int ligne;
                 mesExes.AppliquerGravite(grille, colonneChoisie, joueurActuel, out ligne);
 
-                // 3. Changement de joueur pour le prochain tour
-                if (joueurActuel == 1)
+                if (mesExes.VictoireHorizontale(grille, joueurActuel) == true || mesExes.VictoireVerticalement(grille, joueurActuel) == true)
                 {
-                    joueurActuel = 2;
-                }
-                else
-                {
-                    joueurActuel = 1;
-                }
+                    // On affiche la grille finale
+                    mesExes.AfficherGrille(grille);
+                    Console.WriteLine("\n BRAVO ! Le Joueur " + joueurActuel + " a gagné !");
 
-                // Plus tard : la vérification de victoire 
-              
+                    partieEnCours = false;
+                }
+                else // Si personne n'a gagné, on passe à l'autre joueur
+                {
+                    if (joueurActuel == 1)
+                    {
+                        joueurActuel = 2;
+                    }
+                    else
+                    {
+                        joueurActuel = 1;
+                    }
+                }
             }
+
+            Console.ReadLine();
         }
     }
 }
