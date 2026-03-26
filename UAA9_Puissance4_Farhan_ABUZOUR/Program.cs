@@ -6,10 +6,9 @@
         {
 
             int[,] grille = new int[6, 7];
-            int joueurActuel = 1; // Le joueur 1 commence
-            bool partieEnCours = true; // Permet de faire tourner le jeu
+            int joueurActuel = 1; 
+            bool partieEnCours = true; 
 
-            // 2. Boucle principale du jeu
             while (partieEnCours)
             {
                 // On affiche la grille
@@ -25,6 +24,7 @@
                 int ligne;
                 mesExes.AppliquerGravite(grille, colonneChoisie, joueurActuel, out ligne);
 
+
                 if (mesExes.VictoireHorizontale(grille, joueurActuel) == true || mesExes.VictoireVerticalement(grille, joueurActuel) == true || mesExes.VictoireDiagonaleDescendante(grille, joueurActuel) == true || mesExes.VictoireDiagonaleMontante(grille, joueurActuel) == true)
                 {
                     // On affiche la grille finale
@@ -32,6 +32,12 @@
                     Console.WriteLine("\n BRAVO ! Le Joueur " + joueurActuel + " a gagné !");
 
                     partieEnCours = false;
+                }
+                else if (mesExes.GrillePleine(grille) == true)
+                {
+                    mesExes.AfficherGrille(grille);
+                    Console.WriteLine("\n MATCH NUL ! La grille est pleine, personne n'a gagné. ");
+                    partieEnCours = false; 
                 }
                 else // Si personne n'a gagné, on passe à l'autre joueur
                 {
@@ -47,6 +53,7 @@
             }
 
             Console.ReadLine();
+
         }
     }
 }

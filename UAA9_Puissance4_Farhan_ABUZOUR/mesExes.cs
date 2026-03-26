@@ -12,44 +12,67 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
         /// Cette méthode affiche la grille de jeu dans la console, en remplaçant les chiffres par des symboles visuels pour une meilleure lisibilité
         /// </summary>
         /// <param name="grille"></param> 
+        /// <summary>
+        /// Affiche la grille avec les couleurs classiques du Puissance 4 (Grille bleue, Jetons Rouges/Jaunes)
+        /// </summary>
         public static void AfficherGrille(int[,] grille)
         {
             Console.Clear();
+            Console.WriteLine("\n       PUISSANCE 4");
+            Console.WriteLine("  =====================\n");
+
             for (int iLigne = 0; iLigne < grille.GetLength(0); iLigne++)
             {
+                // On dessine le bord gauche en bleu
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
                 Console.Write("|");
 
                 for (int iColonne = 0; iColonne < grille.GetLength(1); iColonne++)
                 {
                     string symbole = " ";
-                    int valeurCase = grille[iLigne, iColonne]; // On regarde ce qu'il y a dans la case
+                    int valeurCase = grille[iLigne, iColonne];
 
-                    // 1. Les jetons normaux
-                    if (valeurCase == 1) symbole = "X";
-                    if (valeurCase == 2) symbole = "O";
+                    // On choisit la couleur et le symbole en fonction du contenu de la case
+                    ConsoleColor couleurJeton = ConsoleColor.White;
 
-                    // 2. Les jetons GAGNANTS (11 ou 12)
-                    if (valeurCase == 11 || valeurCase == 12)
+                    if (valeurCase == 1) // Joueur 1 normal
                     {
-                        if (valeurCase == 11) symbole = "X";
-                        if (valeurCase == 12) symbole = "O";
-
-                        // On active la couleur verte pour les gagnants !
-                        Console.ForegroundColor = ConsoleColor.Green;
+                        symbole = "O";
+                        couleurJeton = ConsoleColor.Red;
+                    }
+                    else if (valeurCase == 2) // Joueur 2 normal
+                    {
+                        symbole = "O";
+                        couleurJeton = ConsoleColor.Yellow;
+                    }
+                    else if (valeurCase == 11 || valeurCase == 12) // Jetons GAGNANTS
+                    {
+                        symbole = "O";
+                        couleurJeton = ConsoleColor.Green; // Vert éclatant pour la victoire
                     }
 
-                    // On écrit le symbole (en couleur ou non)
+                    // On dessine le jeton avec sa couleur
+                    Console.ForegroundColor = couleurJeton;
                     Console.Write(" " + symbole + " ");
 
-                    // On remet la couleur normale (gris/blanc) pour la barre de séparation "|"
-                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
                     Console.Write("|");
                 }
                 Console.WriteLine();
             }
+
+            // Le bas de la grille en bleu
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine("-----------------------------");
+
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("| 0   1   2   3   4   5   6 |");
+
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine("-----------------------------");
+
+           
+            Console.ResetColor();
         }
         /// <summary>
         /// Cette méthode demande au joueur de choisir une colonne, et vérifie que la saisie est valide (entre 0 et 6, et que la colonne n'est pas pleine)
@@ -221,6 +244,22 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
                 }
             }
             return false;
+        }
+        /// <summary>
+        /// Vérifie si la grille est totalement pleine (match nul)
+        /// </summary>
+        /// <param name="tab">La grille de jeu (6 lignes, 7 colonnes)</param>
+        /// <returns></returns>
+        public static bool GrillePleine(int[,] tab)
+        {
+            for (int iColonne = 0; iColonne <= 6; iColonne++)
+            {
+                if (tab[0, iColonne] == 0)
+                {
+                    return false; 
+                }
+            }
+            return true;
         }
         /// <summary>
         /// Cette méthode demande à l'utilisateur de saisir un entier, et vérifie que la saisie est bien un entier avant de le retourner
