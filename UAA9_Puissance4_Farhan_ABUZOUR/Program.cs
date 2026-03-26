@@ -25,7 +25,7 @@
                 int ligne;
                 mesExes.AppliquerGravite(grille, colonneChoisie, joueurActuel, out ligne);
 
-                if (mesExes.VictoireHorizontale(grille, joueurActuel) == true || mesExes.VictoireVerticalement(grille, joueurActuel) == true)
+                if (mesExes.VictoireHorizontale(grille, joueurActuel) == true || mesExes.VictoireVerticalement(grille, joueurActuel) == true || mesExes.VictoireDiagonaleDescendante(grille, joueurActuel) == true || mesExes.VictoireDiagonaleMontante(grille, joueurActuel) == true)
                 {
                     // On affiche la grille finale
                     mesExes.AfficherGrille(grille);

@@ -136,11 +136,17 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
             }
             return false;
         }
-       /* public static bool VictoireVerticalement(int[,] tab, int joueur)
+        /// <summary>
+        ///  vérifier si le joueur qui vient de jouer à aligner 4 jetons de sa couleur sur une même ligne
+        /// </summary>
+        /// <param name="tab">La grille de jeu (6 lignes, 7 colonnes)</param>
+        /// <param name="joueur">joueur  1 ou 2</param>
+        /// <returns></returns>
+        public static bool VictoireVerticalement(int[,] tab, int joueur)
         {
             for (int iColonne = 0; iColonne <= 6; iColonne++)
             {
-                for (int iLigne = 3; iLigne >= 0; iLigne++)
+                for (int iLigne = 2; iLigne >= 0; iLigne--)
                 {
                     if (tab[iLigne, iColonne] == joueur &&
                         tab[iLigne + 1, iColonne] == joueur &&
@@ -157,7 +163,65 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
                 }
             }
             return false;
-        }*/
+        }
+        /// <summary>
+        /// Cette méthode vérifie s'il y a une victoire en diagonale descendante pour le joueur donné, en parcourant le plateau et en cherchant 4 jetons consécutifs du même joueur dans une diagonale descendante (de haut-gauche à bas-droite)
+        /// </summary>
+        /// <param name="tab">La grille de jeu (6 lignes, 7 colonnes)</param>
+        /// <param name="joueur">joueur  1 ou 2</param>
+        /// <returns></returns>
+        public static bool VictoireDiagonaleDescendante(int[,] tab, int joueur)
+        {
+            for (int iLigne = 0; iLigne <= 2; iLigne++)
+            {
+                for (int iColonne = 0; iColonne <= 3; iColonne++)
+                {
+                    if (tab[iLigne, iColonne] == joueur &&
+                        tab[iLigne+1, iColonne + 1] == joueur &&
+                        tab[iLigne+2, iColonne + 2] == joueur &&
+                        tab[iLigne+3, iColonne + 3] == joueur)
+                    {
+
+                        tab[iLigne, iColonne] = joueur + 10;
+                        tab[iLigne +1, iColonne + 1] = joueur + 10;
+                        tab[iLigne +2, iColonne + 2] = joueur + 10;
+                        tab[iLigne+3, iColonne + 3] = joueur + 10;
+
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        /// <summary>
+        /// Cette méthode vérifie s'il y a une victoire en diagonale montante pour le joueur donné, en parcourant le plateau et en cherchant 4 jetons consécutifs du même joueur dans une diagonale montante (de bas-gauche à haut-droite)
+        /// </summary>
+        /// <param name="tab">La grille de jeu (6 lignes, 7 colonnes)</param>
+        /// <param name="joueur">joueur  1 ou 2</param>
+        /// <returns></returns>
+        public static bool VictoireDiagonaleMontante(int[,] tab, int joueur)
+        {
+            for (int iLigne = 3; iLigne <= 5; iLigne++)
+            {
+                for (int iColonne = 0; iColonne <= 3; iColonne++)
+                {
+                    if (tab[iLigne, iColonne] == joueur &&
+                        tab[iLigne - 1, iColonne + 1] == joueur &&
+                        tab[iLigne - 2, iColonne + 2] == joueur &&
+                        tab[iLigne - 3, iColonne + 3] == joueur)
+                    {
+
+                        tab[iLigne, iColonne] = joueur + 10;
+                        tab[iLigne - 1, iColonne + 1] = joueur + 10;
+                        tab[iLigne - 2, iColonne + 2] = joueur + 10;
+                        tab[iLigne - 3, iColonne + 3] = joueur + 10;
+
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
         /// <summary>
         /// Cette méthode demande à l'utilisateur de saisir un entier, et vérifie que la saisie est bien un entier avant de le retourner
         /// </summary>

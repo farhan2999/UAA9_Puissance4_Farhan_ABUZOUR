@@ -10,14 +10,14 @@
         "projectUniqueName": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR.csproj",
         "projectName": "UAA9_Puissance4_Farhan_ABUZOUR",
         "projectPath": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR.csproj",
-        "packagesPath": "C:\\Users\\200550.asty-moulin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\200550\\.nuget\\packages\\",
         "outputPath": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\200550.asty-moulin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\200550\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
