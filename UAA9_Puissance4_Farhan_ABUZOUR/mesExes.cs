@@ -18,8 +18,11 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
         public static void AfficherGrille(int[,] grille)
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\n       PUISSANCE 4");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("  =====================\n");
+            Console.ForegroundColor = ConsoleColor.White;
 
             for (int iLigne = 0; iLigne < grille.GetLength(0); iLigne++)
             {
@@ -65,8 +68,8 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine("-----------------------------");
 
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("| 0   1   2   3   4   5   6 |");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("[ 0   1   2   3   4   5   6 ]");
 
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine("-----------------------------");
@@ -86,7 +89,7 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
 
             do
             {
-                // 1. On utilise TA méthode LireEntier ici !
+                Console.ForegroundColor = ConsoleColor.White;
                 colonneIndex = LireEntier("Entrez le numéro de la colonne (0 à 6) : ");
 
                 saisieValide = true; // On part du principe que c'est bon, puis on vérifie les règles

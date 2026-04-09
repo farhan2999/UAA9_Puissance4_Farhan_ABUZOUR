@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAiwDsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T08:47:21.515Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -41,9 +28,22 @@
               "RelativeDocumentMoniker": "mesExes.cs",
               "ToolTip": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\mesExes.cs",
               "RelativeToolTip": "mesExes.cs",
-              "ViewState": "AgIAAPUAAAAAAAAAAADwvwIBAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T08:45:50.684Z",
+              "WhenOpened": "2026-04-09T06:54:48.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T06:39:01.131Z",
               "EditorCaption": ""
             }
           ]
