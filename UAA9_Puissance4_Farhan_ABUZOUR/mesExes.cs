@@ -92,6 +92,7 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
                 Console.ForegroundColor = ConsoleColor.White;
                 colonneIndex = LireEntier("Entrez le numéro de la colonne (0 à 6) : ");
 
+          
                 saisieValide = true; // On part du principe que c'est bon, puis on vérifie les règles
 
                 // 2. Vérifier si le nombre est en dehors du plateau
