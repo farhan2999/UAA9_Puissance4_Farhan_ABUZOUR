@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D36963D5-1A6A-7DF5-3171-639D55594B0E}|UAA9_Puissance4_Farhan_ABUZOUR.csproj|h:\\5tti_re\\uaa9\\uaa9_puissance4_farhan_abuzour\\uaa9_puissance4_farhan_abuzour\\uaa9_puissance4_farhan_abuzour\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D36963D5-1A6A-7DF5-3171-639D55594B0E}|UAA9_Puissance4_Farhan_ABUZOUR.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D36963D5-1A6A-7DF5-3171-639D55594B0E}|UAA9_Puissance4_Farhan_ABUZOUR.csproj|h:\\5tti_re\\uaa9\\uaa9_puissance4_farhan_abuzour\\uaa9_puissance4_farhan_abuzour\\uaa9_puissance4_farhan_abuzour\\mesexes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D36963D5-1A6A-7DF5-3171-639D55594B0E}|UAA9_Puissance4_Farhan_ABUZOUR.csproj|solutionrelative:mesexes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36963D5-1A6A-7DF5-3171-639D55594B0E}|UAA9_Puissance4_Farhan_ABUZOUR.csproj|h:\\5tti_re\\uaa9\\uaa9_puissance4_farhan_abuzour\\uaa9_puissance4_farhan_abuzour\\uaa9_puissance4_farhan_abuzour\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36963D5-1A6A-7DF5-3171-639D55594B0E}|UAA9_Puissance4_Farhan_ABUZOUR.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "mesExes.cs",
               "DocumentMoniker": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\mesExes.cs",
               "RelativeDocumentMoniker": "mesExes.cs",
               "ToolTip": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\mesExes.cs",
               "RelativeToolTip": "mesExes.cs",
-              "ViewState": "AgIAANUAAAAAAAAAAAAswBYBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAmwEkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T06:54:48.558Z"
+              "WhenOpened": "2026-04-09T06:54:48.558Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "H:\\5TTI_Re\\UAA9\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\UAA9_Puissance4_Farhan_ABUZOUR\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T06:39:01.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-09T06:39:01.131Z"
             }
           ]
         }

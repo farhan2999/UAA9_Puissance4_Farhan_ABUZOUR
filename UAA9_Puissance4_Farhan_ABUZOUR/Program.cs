@@ -98,7 +98,7 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
                     }
                 }
 
-                Console.WriteLine(); // Petit espace
+                Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Magenta;
                 Console.WriteLine("Voulez-vous rejouer ? (O/N)");
                 Console.ResetColor();
@@ -107,7 +107,7 @@ namespace UAA9_Puissance4_Farhan_ABUZOUR
 
             } while (rec == "o");
 
-            // Petit message d'au revoir quand on quitte
+            
             Console.WriteLine("Merci d'avoir joué ! À bientôt.");
         }
     }

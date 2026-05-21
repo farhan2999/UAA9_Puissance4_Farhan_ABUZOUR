@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UAA9_Puissance4_Farhan_ABUZOUR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6672293f28a16646b8af9a4a3cb929c3e1999949")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7600fe6d5a175880ff9605b0d32b8f378e8da601")]
 [assembly: System.Reflection.AssemblyProductAttribute("UAA9_Puissance4_Farhan_ABUZOUR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UAA9_Puissance4_Farhan_ABUZOUR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
